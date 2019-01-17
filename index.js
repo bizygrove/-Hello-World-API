@@ -95,6 +95,12 @@ server.listen(3005,function(){
 
 var handlers = {};
 
+handlers.notFound = function(data, callback) {
+    callback(404, {
+        'error' : '404 page'
+    })
+}
+
 handlers.hello = function(data, callback){
     callback(406, {
         'Movie' : 'Monty Python',
